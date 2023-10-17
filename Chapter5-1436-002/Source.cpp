@@ -103,37 +103,60 @@ int main()
 
     //Turing-complete 
 
-    cout << "Enter the number you want someone to guess: " << endl; 
-    int correctNumber = 72; 
-    cin >> correctNumber; 
+    //cout << "Enter the number you want someone to guess: " << endl; 
+    //int correctNumber/* = 72*/; 
+    //
+    //cin >> correctNumber; 
 
+    //system("CLS"); //CLEARS screen 
+
+    srand(time(0)); 
+    int loopCount = 0; 
+    //while (loopCount < 10)
+    //{
+    int correctNumber = rand() % 100; //generates random integer between 
+
+   //cout << "Random number generated was: " << correctNumber << endl;
+
+    //    loopCount++;
+    //}
     int guessedNumber = -999; //guestNumber
 
+    //LOSS condition
+    int guessCount = 0; 
+    
     cout << "Guess the number (between 0 and 100)!" << endl;
-    while (guessedNumber != correctNumber)
+    while (guessedNumber != correctNumber && guessCount < 10)
     {
 
         if (guessedNumber > correctNumber)
         {
             cout << "Your guess was too HIGH - guess again" << endl; 
             cin >> guessedNumber;
-
+            guessCount++; 
         }
 
         else if (guessedNumber < correctNumber)
         {
             cout << "Your guess was too LOW - guess again" << endl;
             cin >> guessedNumber;
-
+            guessCount++;
         }
         
         else
         {
             cout << "YOU WON!" << endl; 
         }
-    }
+    } //end while 
 
-    cout << "You guessed the number!" << endl; 
+    if (guessCount == 10)
+    {
+        cout << "Too many guesses - you lost!" << endl; 
+    }
+    else
+    {
+        cout << "You guessed the number!" << endl;
+    }
 
     return 0;
 }
