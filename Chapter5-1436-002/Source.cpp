@@ -1,10 +1,56 @@
 #include <iostream>
 
+#include<fstream> 
+
+#include<string>
+
+
 using namespace std;
 
 int main()
 {
 
+    ////"C:\Users\Work\Downloads\titanic.csv"
+    //ifstream inputFile{ "C:/Users/Work/Downloads/titanic.csv" }; 
+    //
+    ////read in first 50 rows of titanic dataset: 
+    //string row; 
+    //for (int i = 0; i <= 50; i++)
+    //{
+    //    getline(inputFile, row);
+
+    //    cout << row << endl; 
+    //}
+
+    //int grade;
+
+    //for (int i = 1; i <= 5; i++)
+    //{
+    //    cout << "Enter student number " << i << "'s grade: ";
+    //    cin >> grade;
+    //}
+
+    //const double PI = 3.14;
+    //for (double i = 0; i <= 10 * PI; i = i + PI)
+    //{
+    //    cout << i << endl;
+    //}
+    //cout << "i" << "\t\t" << "2^i" << endl; //column description
+    //cout << "--------------------------" << endl; //row separator
+    //for (int i = 0; i <= 10; i++)
+    //{
+    //    cout << i << "\t\t" << pow(2, i) << endl;
+    //}
+    int i = 10'000'000'000; 
+
+    cout << i << endl; 
+    //for (int i = 0; i < 10'000'000'000; i++)
+    //{
+    //    //do something
+    //    cout << "Hello?" << endl; 
+
+    //    if (i )
+    //}
     //int dayCounter = 0; 
 
     //while (dayCounter < 30)
@@ -110,53 +156,54 @@ int main()
 
     //system("CLS"); //CLEARS screen 
 
-    srand(time(0)); 
-    int loopCount = 0; 
-    //while (loopCount < 10)
-    //{
-    int correctNumber = rand() % 100; //generates random integer between 
 
-   //cout << "Random number generated was: " << correctNumber << endl;
 
-    //    loopCount++;
-    //}
-    int guessedNumber = -999; //guestNumber
+   // srand(time(0)); 
+   // int loopCount = 0; 
 
-    //LOSS condition
-    int guessCount = 0; 
+   // int correctNumber = rand() % 100; //generates random integer between 
+
+   ////cout << "Random number generated was: " << correctNumber << endl;
+
+   // int guessedNumber = -999; //guestNumber
+
+   // //LOSS condition
+   // int guessCount = 0; 
+   // 
+   // cout << "Guess the number (between 0 and 100)!" << endl;
+   // while (guessedNumber != correctNumber && guessCount < 10)
+   // {
+
+   //     if (guessedNumber > correctNumber)
+   //     {
+   //         cout << "Your guess was too HIGH - guess again" << endl; 
+   //         cin >> guessedNumber;
+   //         guessCount++; 
+   //     }
+
+   //     else if (guessedNumber < correctNumber)
+   //     {
+   //         cout << "Your guess was too LOW - guess again" << endl;
+   //         cin >> guessedNumber;
+   //         guessCount++;
+   //     }
+   //     
+   //     else
+   //     {
+   //         cout << "YOU WON!" << endl; 
+   //     }
+   // } //end while 
+
+   // if (guessCount == 10)
+   // {
+   //     cout << "Too many guesses - you lost!" << endl; 
+   // }
+   // else
+   // {
+   //     cout << "You guessed the number!" << endl;
+   // }
+
+
     
-    cout << "Guess the number (between 0 and 100)!" << endl;
-    while (guessedNumber != correctNumber && guessCount < 10)
-    {
-
-        if (guessedNumber > correctNumber)
-        {
-            cout << "Your guess was too HIGH - guess again" << endl; 
-            cin >> guessedNumber;
-            guessCount++; 
-        }
-
-        else if (guessedNumber < correctNumber)
-        {
-            cout << "Your guess was too LOW - guess again" << endl;
-            cin >> guessedNumber;
-            guessCount++;
-        }
-        
-        else
-        {
-            cout << "YOU WON!" << endl; 
-        }
-    } //end while 
-
-    if (guessCount == 10)
-    {
-        cout << "Too many guesses - you lost!" << endl; 
-    }
-    else
-    {
-        cout << "You guessed the number!" << endl;
-    }
-
     return 0;
 }
