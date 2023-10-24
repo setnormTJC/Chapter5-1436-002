@@ -10,6 +10,36 @@ using namespace std;
 int main()
 {
 
+    //for (int i = 0; i < 4; i++)
+    //{
+    //    for (int j = 0; j < 3; j++)
+    //    {
+    //        cout << "i: " << i << "\tj: " << j << endl; 
+    //    }
+    //    cout << '\n';
+    //}
+    ifstream dictionaryFile{ "C:/Users/Work/Downloads/words.txt" };
+
+    int wordCount = 0; 
+    while (!dictionaryFile.eof())
+    {
+        string currentWord; 
+        getline(dictionaryFile, currentWord);
+        cout << currentWord << endl; 
+
+        wordCount++; 
+    }
+
+    cout << "Total number of words: " << wordCount << endl; 
+    //for (int i = 1; i < 5; i++)
+    //{
+    //    for (int j = 0; j < 4; j++)
+    //    {
+    //        cout << i * j << " ";
+    //    }
+    //    cout << '\n';
+    //}
+    
     ////"C:\Users\Work\Downloads\titanic.csv"
     //ifstream inputFile{ "C:/Users/Work/Downloads/titanic.csv" }; 
     //
@@ -41,9 +71,9 @@ int main()
     //{
     //    cout << i << "\t\t" << pow(2, i) << endl;
     //}
-    int i = 10'000'000'000; 
+    //int i = 10'000'000'000; 
 
-    cout << i << endl; 
+    //cout << i << endl; 
     //for (int i = 0; i < 10'000'000'000; i++)
     //{
     //    //do something
