@@ -18,19 +18,29 @@ int main()
     //    }
     //    cout << '\n';
     //}
+    
     ifstream dictionaryFile{ "C:/Users/Work/Downloads/words.txt" };
 
     int wordCount = 0; 
+    int twentyPlusLetterWordCount = 0; 
     while (!dictionaryFile.eof())
     {
         string currentWord; 
         getline(dictionaryFile, currentWord);
-        cout << currentWord << endl; 
+       
+        //cout << currentWord << endl; 
+        wordCount++;
 
-        wordCount++; 
+        //Extension of last time: 
+        if (currentWord.length() > 20 and currentWord[0] == 'a')
+        {
+            twentyPlusLetterWordCount++;
+            cout << currentWord << endl; 
+        }
     }
 
-    cout << "Total number of words: " << wordCount << endl; 
+    cout << "Total number of words with > 20 chars: " << twentyPlusLetterWordCount << endl; 
+
     //for (int i = 1; i < 5; i++)
     //{
     //    for (int j = 0; j < 4; j++)
